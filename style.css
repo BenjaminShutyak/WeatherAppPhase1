@@ -5,9 +5,9 @@ body {
     height: 100vh;
     margin: 0%;
     font-family: 'Roboto', sans-serif;
+    color: black;
     background-color: rgb(36, 83, 236);
 }
-
 .card {
     background: #000000d0;
     color: white;
@@ -22,7 +22,6 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    color: black;
 }
 
 button {
@@ -54,18 +53,18 @@ button:hover {
     background: #7c7c7c6b;
   }
 
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5em;
+}
+
 h2 {
     display: flex;
     align-items: center;
     justify-content: center;
 }
-
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
 .description {
     display: flex;
     align-items: center;
@@ -82,4 +81,27 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.description {
+    text-transform: capitalize;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+}
+
+.weather.loading {
+    visibility: hidden;
+    max-height: 20px;
+    position: relative;
+}
+
+.weather.loading.after {
+    visibility: visible;
+    content: "loading...";
+    color: white;
+    position: absolute;
+    top: 0;
 }
