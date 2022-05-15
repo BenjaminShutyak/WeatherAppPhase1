@@ -15,13 +15,15 @@ let weather = {
       .then((data) => this.displayWeather(data));
   },
     displayWeather: function(data) {
+    debugger;
     const {name} = data
     const {description} = data.weather[0];
     const {temp, humidity} = data.main
     const {speed} = data.wind
-    document.querySelector("city").innerText = "Weather in " + name;
-    document.querySelector(".icon").src =
-    "https://openweathermap.org/img/wn/" + icon + ".png";
+    x = document.querySelector(".city")
+    document.querySelector(".city").innerText = "Weather in " + name;
+   /* document.querySelector(".icon").src =
+    "https://openweathermap.org/img/wn/" + icon + ".png";*/
     document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = temp + "°C";
     document.querySelector(".humidity").innerText = humidity + "%";
@@ -30,17 +32,22 @@ let weather = {
 },
 };
 
-search: function() {
-    document.querySelector(".search-bar").value;
+search  = function() {
+    city = document.querySelector(".search-bar").value;
+    weather.fetchWeather(city);
+
 }
 
 document.querySelector(".search button")
-.addEventListener("click", function {
-    weather.search();
+.addEventListener("click", function() {
+    search();
 });
 
-document.querySelector(".search-bar").addEventListener("keyup", function(events) if (events.key === "Enter") {
-    weather.search();
+document.querySelector(".search-bar").addEventListener("keyup", function(events)  {
+    if  (events.key === "Enter"){
+
+        search();
+    }
 });
 
 weather.fetchWeather("Denver");
