@@ -15,15 +15,12 @@ let weather = {
       .then((data) => this.displayWeather(data));
   },
     displayWeather: function(data) {
-    debugger;
     const {name} = data
     const {description} = data.weather[0];
     const {temp, humidity} = data.main
     const {speed} = data.wind
-    x = document.querySelector(".city")
+    //debugger testing x = document.querySelector(".city")//
     document.querySelector(".city").innerText = "Weather in " + name;
-   /* document.querySelector(".icon").src =
-    "https://openweathermap.org/img/wn/" + icon + ".png";*/
     document.querySelector(".description").innerText = description;
     document.querySelector(".temp").innerText = temp + "°C";
     document.querySelector(".humidity").innerText = humidity + "%";
