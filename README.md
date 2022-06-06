@@ -12,9 +12,11 @@ When you load up the app, enter your location or desired location in the search 
 The API will retrieve information and display a result. You will receive the weather in Fahrenheit, a snippet of weather features such as broken clouds, etc, and the humidity.
 
 Support  
+
 Have any issues or comments?
 
 Please click the "Contact Me" button at the bottom and fill out a brief form. I will respond as soon as I can.   Thank you for using my app! Have a fantastic day! 
 
-Author 
+Author
+
 Benjamin Shutyak
