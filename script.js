@@ -3,7 +3,7 @@ let weather = {
     fetchWeather: function(city) {
     fetch( "https://api.openweathermap.org/data/2.5/weather?q=" 
     + city 
-    + "&units=metric&appid=" +
+    + "&units=imperial&appid=" +
     this.apiKey)
     .then((response) => {
         if (!response.ok) {
@@ -19,12 +19,11 @@ let weather = {
     const {description} = data.weather[0];
     const {temp, humidity} = data.main
     const {speed} = data.wind
-    //debugger testing x = document.querySelector(".city")//
     document.querySelector(".city").innerText = "Weather in " + name;
     document.querySelector(".description").innerText = description;
-    document.querySelector(".temp").innerText = temp + "°C";
+    document.querySelector(".temp").innerText = temp + "°F";
     document.querySelector(".humidity").innerText = humidity + "%";
-    document.querySelector(".wind").innerText = speed + "km/h";
+    document.querySelector(".wind").innerText = speed + "m/h";
     document.querySelector(".weather").classList.remove("loading");
 },
 };
@@ -34,17 +33,10 @@ search  = function() {
     weather.fetchWeather(city);
 
 }
-
-document.querySelector(".search button")
-.addEventListener("click", function() {
-    search();
-});
-
 document.querySelector(".search-bar").addEventListener("keyup", function(events)  {
     if  (events.key === "Enter"){
 
-        search();
-    }
-});
-
+        search();}
+ });
+ 
 weather.fetchWeather("Denver");
