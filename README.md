@@ -17,6 +17,9 @@ Have any issues or comments?
 
 Please click the "Contact Me" button at the bottom and fill out a brief form. I will respond as soon as I can.   Thank you for using my app! Have a fantastic day! 
 
+Video Walkthrough if you need help!
+https://youtu.be/pnTXkxlLn3E
+
 Author
 
 Benjamin Shutyak
