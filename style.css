@@ -33,8 +33,6 @@ button {
    outline: none;
    background: none;
    color: white;
-   cursor: pointer;
-   transition: 0.2 ease-in-out;
 }
 
 input.search-bar {
@@ -90,4 +88,19 @@ h2 {
 .flex {
     display: flex;
     align-items: center;
+}
+
+h3 { 
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: underline;     
+        text-decoration-color: white;  
+}
+
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em 0.25em;
 }
